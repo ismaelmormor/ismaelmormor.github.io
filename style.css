@@ -1177,6 +1177,9 @@ legend{
     .flipcards{
         flex-direction: column;
     }
+    .textogato2{
+        font-size: 12px;
+    }
 }
 
 
