@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/logos/logo.png" type="image/x-icon">
+    <title>Formulario</title>
+</head>
+<body class="body-form">
+    <nav>
+        <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+        <a href="index.html"><img class="logo-inicio" src="img/logos/logo.png" alt=""></a>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="quienessomos.html">Quienes somos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="login.html">Área Clientes</a></li>
+        </ul>
+    </nav>
+    <header class="header-form">
+        <h1>Contáctanos</h1>
+        <p>A continuación puedes enviarnos tus consultas, quejas y sugerencias a través de un correo electrónico.</p>
+    </header>
+    <div class="container-formulario">
+        <form action="raul.rodriguez@universidadeuropea.es" method="post">
+            <fieldset class="formContainer">
+                <div>
+                    <fieldset class="informacionClienteForm">
+                        <legend>
+                            INFORMACIÓN DE CLIENTE
+                        </legend>
+                        <label for="">
+                            Nombre:
+                            <input type="text">
+                        </label>
+                        <label for="">
+                            Apellido:
+                            <input type="text">
+                        </label>
+                        <label for="">
+                            La fecha de nacimiento:
+                            <input type="date">
+                        </label>
+                        <label for="">
+                            Sexo:
+                        </label>
+                        <label for="" class="sexo">
+                            hombre <input class="sexo" type="radio" name="sexo" value="hombre">
+                            mujer <input class="sexo" type="radio" name="sexo" value="mujer">
+                            indefinido <input class="sexo" type="radio" name="sexo" value="indefinido">
+                        </label>          
+                    </fieldset>
+                    <fieldset class="informacionClienteForm">
+                        <legend>
+                            Email
+                        </legend>
+                        <label for="">
+                            Email:
+                            <input type="email" placeholder="***@***.com">
+                        </label>
+                    </fieldset>
+                    <fieldset class="informacionClienteForm">
+                        <legend>Dirección</legend>
+                        <label for="">
+                            Portal: <input type="postal" class="numeroCalle" minlength="5" maxlength="5">
+                        </label>
+                        <label for="">
+                            Calle: <input type="text">
+                        </label>
+                        <label for="">
+                            Puerta:
+                            <input type="text" class="numeroCalle">
+                        </label>
+                    </fieldset>
+                    <fieldset class="informacionClienteForm">
+                        <legend>
+                            Teléfono
+                        </legend>
+                        <label for="">
+                            Télefono: <input type="tel" minlength="9" maxlength="9" >
+                        </label>
+                    </fieldset>
+                </div>
+                <fieldset class="informacionClienteForm">
+                    <legend>
+                        COMENTARIOS
+                    </legend>
+                    <label for="">
+                        <textarea name="" id="" cols="31" rows="20" placeholder="  Apunte tus consultas"></textarea>
+                    </label>
+                    <input class="enviar-form" type="submit" name="">
+                </fieldset>
+            </fieldset>
+        </form>
+    </div>
+    <footer>
+        <div class="footer-row">
+            <ul>
+                <li>Empresa</li>
+                <li><hr></li>
+                <li><a href="quienessomos.html">Quienes somos</a></li>
+            </ul>
+            <ul>
+                <li>Ayuda</li>
+                <li><hr></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="formulario.html">Formulario</a></li>
+            </ul>
+        </div>
+        <div class="footer-row">
+            <ul>
+                <li>Tienda</li>
+                <li><hr></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="login.html">Área cliente</a></li>
+            </ul>
+            <ul>
+                <li>Síguenos</li>
+                <li><hr></li>
+                <li><a href="noticias.html">Noticias</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

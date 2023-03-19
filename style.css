@@ -1,0 +1,1313 @@
+/*
+    En este archivo utilizaremos ciertas propiedades no vistas en clase.
+    - Display flex, sirve para hacer que los items de un div se visualicen de 
+    manera lineal o en columna, usando flex-direction: column
+    - -webkit-scrollbar: esto es la barra que sale en el navegador para mostrar el contenido
+    que no sale en la pantalla entera.
+    - overflow: hidden; para que lo que no quepa en un div por ejemplo, no se muestre esa parte
+    que sobra
+    - :active en algunas clases para que esas propiedades de css se apliquen cuando el usuario
+    haga click en el ratón, y se dejan de aplicar cuando el usuario deja de presionar
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Playfair+Display:ital@0;1&display=swap');
+@font-face {
+    font-family: "contacto";
+    src: url(font-family/Staatliches/Staatliches-Regular.ttf);
+    
+}
+@font-face {
+    font-family: "container";
+    src: url(font-family/Righteous/Righteous-Regular.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+/*
+===============================
+    NAV
+===============================
+*/
+nav{
+    position: fixed;
+    z-index: 100;
+    top: 0%;
+    width: 100%;
+    background-color: whitesmoke;
+    padding-left: 2vw;
+    font-family: "contacto";
+}
+nav ul{
+    float: right;
+}
+.logo-inicio{
+    width: 75px;
+    height: 75px;
+}
+nav ul li{
+    display: inline-block;
+    padding: 30px;
+    font-size: 18px;
+}
+nav ul li a{
+    color: black;
+    text-decoration: none;
+}
+.checkbtn{
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+/*
+===============================
+    FOOTER
+===============================
+*/
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #1e4368;
+    padding: 5em 0 5em 0;
+    margin-top: 50px;
+}
+.footer-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+}
+.footer-row ul{
+    width: 50%;
+    margin-left: 16%;
+}
+.footer-row ul li{
+    font-size: 18px;
+    font-family: 'Helvetica';
+    font-weight: lighter;
+    color: white;
+    padding: 0.3em;
+    transition: 0.5s;
+}
+.footer-row ul li a{
+    text-decoration: none;
+    color: white;
+}
+.footer-row ul li:first-child{
+    font-size: 20px;
+    font-family: 'Helvetica';
+    font-weight: bold;
+}
+.footer-row ul li hr{
+    border: 0.1em solid red;
+    width: 30%;
+}
+.footer-row ul li:hover{
+    padding-left: 0.6em;
+}
+
+/*
+===============================
+    INDEX
+===============================
+*/
+.carousel {
+    padding-top: 90px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .slides {
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+  
+  .slides::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .slides-item {
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    flex-shrink: 0;
+    font-size: 100px;
+    height: 600px;
+    justify-content: center;
+    margin: 0 1rem;
+    position: relative;
+    scroll-snap-align: start;
+    transform: scale(1);
+    transform-origin: center center;
+    transition: transform .5s;
+    width: 100%;
+  }
+  
+  .img_carousel{
+    height: 400px;
+    position: absolute;
+    right: 60%;
+  }
+  .texto_front_slide{
+    position: absolute;
+    z-index: 50;
+    left: 40%;
+    top: 45%;
+    font-size: 100px;
+    color: white;
+    font-family: 'Permanent Marker';
+  }
+  .texto_front_slide_desc{
+    position: absolute;
+    z-index: 50;
+    left: 46%;
+    top: 64%;
+    font-size: 30px;
+    color: white;
+    font-family: 'contacto';
+  }
+  .carousel__nav {
+    padding: 1.25rem .5rem;
+  }
+  
+  .slider-nav {
+    align-items: center;
+    background-color: #ddd;
+    border-radius: 50%;
+    color: #000;
+    display: inline-flex;
+    height: 1.5rem;
+    justify-content: center;
+    padding: .5rem;
+    position: relative;
+    text-decoration: none;
+    font-family: "contacto";
+    width: 1.5rem;
+  }
+  
+  .slider-nav:hover,
+  .slider-nav:active {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .slide-1 {
+    background-color: #a4d3ff;
+  }
+  
+  .slide-2 {
+    background-color: #bfd;
+  }
+  
+  .slide-3 {
+    background-color: #cdf;
+  }
+
+/*
+===============================
+    CONTACTO
+===============================
+*/
+
+/* parte body */
+.body-contacto{
+    background-image: linear-gradient(to bottom left,#EFEFBB,#0abfbc);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+/* parte header */
+.header-contacto{
+    margin-bottom: 50px;
+    text-align: center;
+}
+.header-contacto .titulo{
+    margin-bottom: 50px;
+}
+.parrafo{
+    font-family: "Orbitron";
+    font-weight: bolder;
+    font-size: 20px;
+    color: #34495E;
+}
+.parrafo i{
+    font-size: 50px;
+}
+.parrafo1{
+    margin-bottom: 1rem;
+}
+/* barra lateral */
+.phone{
+    background-image: linear-gradient(45deg,#faaca879,#870000);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 30px;
+    color: bisque;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    float: left;
+    position: fixed;
+    right:-15%;
+    z-index: 1;
+}
+.phone p:first-child{
+    margin: 5px;
+    padding: 5px;
+    
+}
+.phone div{
+    display: flex;
+    align-items: center;
+}
+.phone div span{
+    font-size: 30px;
+}
+.phone div p{
+    margin: 5px;
+    padding: 5px;
+}
+.phone:hover {
+    right: 0px;
+    transition: 0.5s;
+}
+/* parte linea horizontal */
+.hr-contacto{
+    border: 2rem inset rgb(64, 224, 216);
+}
+/* parte titulo*/
+.titulo{
+    background-image: url(img/background.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 40%;
+    height: 300px;
+    border-bottom-left-radius: 60%;
+    position: relative;
+    box-shadow: 5px 10px 10px #3c9994;
+}
+.titulo h1{
+    font-size: 100px;
+    color: rgba(255, 255, 255, 0.737);
+    position: absolute;
+    left: 70px;
+    top: 50px;
+    font-family:"contacto";
+}
+/* parte container */
+
+.opcion{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    height: 100%; 
+    width: 80%;
+    margin: auto;
+}
+.opcion div{
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    box-shadow: 0 0 10px black;
+    border-radius: 1rem;
+    margin: 0;
+    padding: 3rem 0 3rem 0;
+}
+.opcion div i{
+    font-size: 50px;
+    box-shadow: 0px 0px 10px white; 
+    border-radius: 50%;
+    background-color:whitesmoke;
+    color: #00bf8f;
+    margin: 1rem;
+}
+.opcion div p{
+    font-size: 2rem;
+    color: #00bf8f;
+    background: rgba(255, 255, 255, 0.648);
+    font-family: "container";
+}
+.opPhone{
+    background-image: url(img/telephone.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 400%;
+    position: relative;
+
+}
+
+.opMail{
+    background-image: url(img/email.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 400%;
+}
+.opSocial{
+    background-image: url(img/social.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 450%;
+}
+.containerPhone{
+    display: none;
+}
+/* animation del hover opPhone */
+.opPhone:hover{
+    transition: 2s;
+    padding:0;
+    background-image: linear-gradient(45deg,#870000,#1e4368);
+}
+
+.opPhone:hover *{ /* Usamos el '*' para aplicar a todo lo de opPhone*/
+    background: none;
+    color: rosybrown;
+}
+
+.opPhone:hover .containerPhone {
+    display: inherit;
+    font-size: 15px;
+    opacity: 1;
+}
+/* animation del hover opMail */
+.opMail:hover{
+    transition: 2s;
+    padding:0;
+    background-image: linear-gradient(45deg,#870000,#1e4368);
+}
+.opMail:hover p{
+    background: none;
+    color: rosybrown;
+}
+.opMail:hover i{
+    background: none;
+    color: rosybrown;
+}
+.opMail:hover a{
+    color: rosybrown;
+    font-weight: bolder;
+}
+.opMail:hover .containerPhone {
+    display: inherit;
+    font-size: 15px;
+}
+/* animation del hover opSocial */
+.opSocial:hover{
+    transition: 2s;
+    padding:0;
+    background-image: linear-gradient(45deg,#870000,#1e4368);
+}
+.opSocial:hover *{ /* Usamos el '*' para aplicar a todo lo de opSocial*/
+    background: none;
+    color: rosybrown;
+}
+.opSocial:hover .containerPhone {
+    display: inherit;
+    font-size: 15px;
+    opacity: 1;
+}
+
+/*
+===============================
+    FORMULARIO
+===============================
+*/
+
+/* parte body */
+.body-form{
+    padding-top: 75px;
+    background-image: linear-gradient(to bottom left,#EFEFBB,#0abfbc);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+/* parte header */
+.header-form{
+    text-align: center;
+    margin: 50px;
+}
+.header-form h1{
+    font-size: 40px;
+    font-family: "contacto";
+}
+.header-form p{
+    font-size: 20px;
+    font-family: "contacto";
+}
+/* parte formulario */
+.container-formulario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-formulario form .formContainer{
+    width: 650px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.container-formulario form .informacionClienteForm{
+    width: 300px;
+    display: grid;
+    background-color: cadetblue;
+}
+legend{
+    text-align: center;
+}
+/*  */
+.container-formulario form fieldset{
+    font-family: "contacto";
+    border: 2px solid black;
+    margin: 0.5rem;
+}
+.container-formulario form label {
+    font-family: "contacto";
+    text-align: left;
+    width: 210px;
+    margin-left: 1rem;
+    margin-bottom: 3px;
+}
+.container-formulario form input {
+    font-family: "contacto";
+    vertical-align: top;
+    border-radius: .5rem;
+    border: 0px;
+    padding-left: 0.5rem;
+    margin-right: 1px;
+    height: 20px;
+}
+.container-formulario form textarea{
+    border-radius: 20px;
+}
+.sexo{
+    width: auto;
+}
+.numeroCalle{
+    width: 4.1rem;
+}
+.enviar-form{
+    width: 30%;
+    background-color: wheat;
+    border: 0;
+    box-shadow: 0px 0px 5px white;
+    margin: 10px;
+    margin-left: 190px;
+}
+.enviar-form:hover{
+    background-color: coral;
+    transition: 2s;
+    box-shadow: 5px 5px 10px red;
+}
+
+/*
+===============================
+    SERVICIOS
+===============================
+*/
+.cuadrado-servicios{
+    margin-top: 75px;
+    padding-bottom: 75px;
+    display: flex;
+    width: 100%;
+    background-color:#ebddd2f8;
+    justify-content: center;
+}
+.cliente{
+    z-index: 20;
+    padding-top: 100px;
+    width: 100%;
+    max-width: 600px;
+    margin-right: 80px;
+    height: 540px;
+    border: 5px;
+    border-radius: 20px;
+}
+.textoServicios{
+    font-family: 'Permanent Marker';
+    overflow: hidden;
+    color: black;
+    text-align: center;
+    width:  500px;
+    max-width: 500% ;
+    margin-top: 90px;
+    margin-right: 40px;
+    float: right;
+    
+}
+.textoServicios2{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+}
+.cruz{
+    width: 15%;
+    margin-right: 25px;
+    margin-top: 10px;
+}
+.tijeras{
+    margin-bottom: 5px;
+    width: 20%;
+}
+.shop{
+    margin-top: 15px;
+    width: 20%;
+    height: 80px;
+}
+/*
+===============================
+    LOGIN
+===============================
+*/
+
+/* parte body */
+.body-login{
+    margin-top: 80px;
+    background-image: linear-gradient(to bottom left,#EFEFBB,#0abfbc);
+}
+/* parte header */
+.header-login{
+    text-align: center;
+}
+.header-login h1{
+    font-size: 40px;
+    font-family: "contacto";
+}
+.header-login p{
+    font-size: 20px;
+    font-family: "contacto";
+}
+/* parte formulario */
+.container-login{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: url(img/bdLogin.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.container-login .anuncio{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 500px;
+    height: 300px;
+}
+.informacionCliente{
+    width: 400px;
+    height: 350px;
+    display: grid;
+    background-color: rgba(229, 234, 235, 0.377);
+    font-family: "contacto";
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 0.5rem;
+    padding: 30px;
+}
+.informacionCliente:hover{
+    color: white;
+    background-color: black;
+    transition: 2s;
+}
+.informacionCliente:hover input{
+    background: white;
+    padding-left: 10px;
+    transition: 3s;
+}
+.informacionCliente p{
+    text-align: center;
+    margin-bottom: 2rem;
+    
+}
+.container-login form legend{
+    text-align: center;
+}
+/*  */
+.container-login form label {
+    font-family: "contacto";
+    text-align: center;
+    width: 210px;
+    margin-left: 1rem;
+    margin-bottom: 3px;
+    font-size: 1rem;
+}
+.container-login form input {
+    font-family: "contacto";
+    border-radius: .5rem;
+    border: 0px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.438);
+}
+.sexo{
+    width: auto;
+}
+.numeroCalle{
+    width: 4.1rem;
+}
+.enviar{
+    font-family: "contacto";
+    font-size: 20px;
+    border-radius: 5px;
+    width: 40%;
+    height: 30px;
+    background-color: wheat;
+    border: 0;
+    box-shadow: 0px 0px 5px white;
+    margin-left: auto;
+    margin-top: 20px;
+}
+.enviar:hover{
+    background-color: coral;
+    transition: 0.5s;
+    box-shadow: 5px 5px 10px red;
+}
+.a-registro{
+    color: white;
+    font-family: "contacto";
+}
+.a-registro a{
+    text-decoration: none;
+    color: coral;
+}
+/*
+===============================
+    REGISTRO
+===============================
+*/
+/* parte formulario */
+.container-registro{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: url(img/bdLogin.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.container-registro .anuncio{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 500px;
+    height: 300px;
+}
+.informacionCliente{
+    width: 400px;
+    height: 350px;
+    display: grid;
+    background-color: rgba(229, 234, 235, 0.377);
+    font-family: "contacto";
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 0.5rem;
+    padding: 30px;
+}
+.informacionCliente h1{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.informacionCliente:hover{
+    color: white;
+    background-color: black;
+    transition: 2s;
+}
+.informacionCliente:hover input{
+    background: white;
+    padding-left: 10px;
+    transition: 3s;
+}
+.informacionCliente:hover select{
+    background: white;
+    transition: 3s;
+}
+.informacionCliente p{
+    text-align: center;
+    margin-bottom: 2rem;
+    
+}
+.container-registro form legend{
+    text-align: center;
+}
+/*  */
+.container-registro form label {
+    font-family: "contacto";
+    text-align: center;
+    width: 210px;
+    margin-left: 1rem;
+    margin-bottom: 3px;
+    font-size: 1rem;
+}
+.container-registro form label>select,
+.container-registro form input {
+    font-family: "contacto";
+    vertical-align: middle;
+    border-radius: .5rem;
+    border: 0px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.438);
+}
+.container-registro form select{
+    font-family: "contacto";
+    border-radius: .5rem;
+    border: 0px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.438);
+    
+}
+.robot{
+    width: 30%;
+    margin-top: 2rem;
+}
+.robot input{
+    margin-right:0.5rem;
+}
+.enviar-registro{
+    font-family: "contacto";
+    font-size: 20px;
+    border-radius: 5px;
+    width: 40%;
+    height: 30px;
+    background-color: wheat;
+    border: 0;
+    box-shadow: 0px 0px 5px white;
+    margin-left: auto;
+    margin-top: 10px;
+
+}
+.enviar-registro:hover{
+    background-color: coral;
+    transition: 0.5s;
+    box-shadow: 5px 5px 10px red;
+}
+/*
+===============================
+    NOTICIAS
+===============================
+*/
+
+.secciones{
+    margin-top: 75px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.secciones section{
+    text-align: center;
+    margin: 50px;
+}
+.secciones section video{
+    display: block;
+    margin: auto;
+    width: 60%;
+}
+.titular{
+    font-size: 22px;
+    font-family: "contacto";
+    margin-bottom: 20px;
+}
+
+/*
+===============================
+    QUIENES SOMOS
+===============================
+*/
+.cuadrado{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 530px;
+    background-color:#7ecae0;
+    margin-top: 75px;
+}
+.gato{
+    padding-top: 60px;
+    width: 600px;
+    margin: 0 50px 0 50px;
+}
+.textoGato{
+    font-family: 'Permanent Marker';
+    color: whitesmoke;
+    text-align: center;
+    width:  500px;
+    margin: 90px 50px 0px 50px;
+    
+}
+.textogato2{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.cuadrado2{
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 50px;
+    background-color: whitesmoke;
+}
+.flipcards{
+    display: inline-flex;
+    justify-content: center ;
+    align-items: center;
+    width: 100%;
+}
+
+.card{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 23px; 
+}
+.card1{
+    max-width: fit-content;
+    padding: 0;
+    margin: 0;
+}
+.card2{
+    max-width: fit-content;
+    padding: 0;
+    margin: 0; 
+}
+.card3{
+    max-width: fit-content;
+    padding: 0;
+    margin: 0;
+}
+.card .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.card .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0px 5px 10px black;
+}
+
+.card .front img{
+    position: absolute;
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+}
+.card .front h3 {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    background: #7ecae0;
+    text-align: center;
+}
+.card .back{
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0px 5px 10px black;
+   
+}
+.card .back .link{
+    border-top: 1px solid #f3f3f3 ;
+    height: 50px;
+    line-height: 50px;
+
+}
+.card .back .link a{
+    color: #f3f3f3;
+}
+.card .back h3{
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+.card .back p{
+        letter-spacing: 1px;
+}
+.card:hover .front{
+    transform: perspective(600px)rotateY(180deg);
+}
+.card:hover .back{
+    transform: perspective(600px)rotateY(360deg);
+}
+.estrella{
+    z-index: 20;
+    height: 20px;
+    width: 20px;
+    top: 40%;
+    left: 30%;
+}
+
+.cuadrado3{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;  
+    height: fit-content;
+    background-color:#7ecae0;
+}
+.mascotas{
+    width: 25vw;
+    height: 20vw;
+}
+
+.textoClientes{
+    
+    margin: auto;
+    background-color:whitesmoke;
+    font-family: 'Permanent Marker';
+    overflow: hidden;
+    color: #7ecae0;
+    text-align: center;
+    right: 380px;
+    position: relative;
+    width:  100%;
+    margin-top: 4vw;
+    right: 1vw;
+    float: right;
+}
+/*
+===============================
+    PRODUCTOS
+===============================
+*/
+
+.body-productos{
+    font-family: "contacto";
+    margin-top: 75px;
+    background-color: #fffef5;
+}
+.titulo-productos{
+    padding-top: 50px;
+    text-align: center;
+}
+.productos-cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+}
+.card-p{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+    margin-top: 0px;
+}
+.card-p .face-p{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.boton-precio{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: 0.5s;
+}
+.boton-precio:hover{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: 0px 5px #00bf8f;
+}
+.card-p .front-p{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0px 5px 10px #000;
+}
+.card-p .front-p img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.card-p .front-p h3{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background-color: #3c9994;
+    text-align: center;
+}
+.card-p .back-p{
+    transform: perspective(600px) rotateY(180deg);
+    background-color: #3c9994;
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0px 5px 10px #000;
+}
+.card-p .back-p .link{
+    border-top: 1px solid #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+.card-p .back-p .link a{
+    color: #f3f3f3;
+}
+.card-p .back-p a{
+    font-size: 20px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+.card-p .back-p p{
+    letter-spacing: 1px;
+}
+.card-p:hover .front-p{
+    transform: perspective(600px)rotateY(180deg);
+}
+.card-p:hover .back-p{
+    transform: perspective(600px)rotateY(360deg);
+}
+
+/*
+===============================
+    MANTENIMIENTO
+===============================
+*/
+.mantenimiento{
+    margin: 2rem;
+}
+.mantenimiento h1{
+    font-size: 40px;
+    font-family: "contacto";
+    text-align: center;
+}
+.mantenimiento p{
+    text-align: center;
+}
+.mantenimiento h1 i{
+    font-size: 40px;
+}
+.mantenimiento p a i{
+    font-size: 40px;
+    color: black;
+}
+
+@media (min-width:953px){
+    .opSocial:hover{
+        width: 100%;
+    }
+    .opMail:hover{
+        width: 100%;
+    }
+    .opPhone:hover{
+        width: 100%;
+    }
+}
+@media (max-width: 952px){
+    /*
+===============================
+    NAV
+===============================
+*/
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 15px;
+    }
+/*
+===============================
+    FOOTER
+===============================
+*/
+    .footer-row ul li{
+        font-size: 16px;
+    }
+    .footer-row ul li:first-child{
+        font-size: 18px;
+    }
+/*
+===============================
+    CONTACTO
+===============================
+*/
+    .titulo h1{
+        font-size: 80px;
+    }
+/*
+===============================
+    QUIENES SOMOS
+===============================
+*/
+    .cuadrado{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        padding-bottom: 50px;
+    }
+    .flipcards{
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 858px){
+    /*
+===============================
+    NAV
+===============================
+*/
+    .checkbtn{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #405e7d;
+        top: 80px;
+        left: 100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 20px 0;
+    }
+    nav ul li a{
+        color: #fff;
+        font-size: 20px;
+    }
+    nav li a:hover, li a.active{
+        background: none;
+        color: red;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+/*
+===============================
+    FOOTER
+===============================
+*/
+footer{
+    flex-direction: column;
+    justify-content: center;
+}
+.footer-row{
+    width: 100%;
+    padding-bottom: 50px;
+}
+.footer-row ul li{
+    font-size: 14px;
+}
+.footer-row ul li:first-child{
+    font-size: 16px;
+}
+
+    /*
+===============================
+    INDEX
+===============================
+*/
+    .img_carousel{
+        height: 300px;
+        position: absolute;
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto;
+      }
+      .texto_front_slide{
+        position: absolute;
+        z-index: 50;
+        left: 0; 
+        right: 0; 
+        top: 70%;
+        margin-left: auto; 
+        margin-right: auto;
+        font-size: 80px;
+        color: white;
+        font-family: 'Permanent Marker';
+      }
+      .texto_front_slide_desc{
+        top: 85%;
+        left: 30%;
+      }
+/*
+===============================
+    CONTACTO
+===============================
+*/
+      .opcion{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .titulo h1{
+        font-size: 58px;
+      }
+/*
+===============================
+    FORMULARIO
+===============================
+*/
+    .container-formulario form .formContainer{
+        flex-direction: column;
+        width: auto;
+    }
+/*
+===============================
+        LOGIN
+===============================
+*/
+    .container-login .anuncio{
+        display: none;
+    }
+/*
+===============================
+    REGISTRO
+===============================
+*/    
+    .container-registro .anuncio{
+        display: none;
+    }
+    .cuadrado-servicios{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .cliente{
+        margin-right: 0;
+    }
+}
